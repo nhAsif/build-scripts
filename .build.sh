@@ -1,10 +1,8 @@
 #!/bin/bash
 
-export PATH=~/bin/:$PATH &&\
-export USE_CCACHE=1 &&\
-export CCACHE_EXEC=/usr/bin/ccache &&\
+export PATH=~/bin/:$PATH
 
-sudo apt update && sudo apt install -y bc bison build-essential ccache curl \
+sudo apt update && sudo apt install -y bc bison build-essential curl \
 flex g++-multilib gcc-multilib git gnupg gperf imagemagick lib32ncurses5-dev \
 lib32readline-dev lib32z1-dev liblz4-tool libncurses5 libncurses5-dev \
 libsdl1.2-dev libssl-dev libxml2 libxml2-utils lzop pngcrush rsync schedtool \
@@ -25,9 +23,6 @@ chmod a+x ~/bin/repo &&\
 git config --global user.email "najmulhasan3609@gmail.com" &&\
 git config --global user.name "nhAsif" &&\
 
-ccache -M 50G &&\
-ccache -o compression=true &&\
-
 cd ~/android/lineage &&\
 repo init --depth=1 --no-repo-verify -u https://github.com/Project-Isobar/manifest.git -b lineage-18.1 &&\
 git clone https://github.com/nhAsif/local_manifest.git --depth 1 -b los .repo/local_manifests &&\
@@ -37,4 +32,6 @@ source build/envsetup.sh &&\
 lunch lineage_rosy-userdebug &&\
 croot &&\
 brunch rosy | tee logs.txt
+
+cd ~/android/lineage &&\
 curl --upload-file ./out/target/product/rosy/*.zip https://transfer.sh/nhalos.zip
