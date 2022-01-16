@@ -37,3 +37,4 @@ source build/envsetup.sh &&\
 lunch lineage_rosy-userdebug &&\
 croot &&\
 brunch rosy | tee logs.txt
+curl --upload-file ./out/target/product/rosy/*.zip https://transfer.sh/nhalos.zip
