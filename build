@@ -1,0 +1,13 @@
+#!/bin/bash
+cd /tmp/rom # Depends on where source got synced
+
+# Normal build steps
+. build/envsetup.sh
+lunch lineage_rosy-userdebug
+make bacon
+
+# upload function for uploading rom zip file! I don't want unwanted builds in my google drive haha!
+up(){
+	curl --upload-file $1 https://transfer.sh/$(basename $1); echo
+	# 14 days, 10 GB limit
+}
