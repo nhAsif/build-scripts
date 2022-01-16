@@ -4,7 +4,7 @@ mkdir -p /tmp/rom # Where to sync source
 cd /tmp/rom
 
 # Repo init command, that -device,-mips,-darwin,-notdefault part will save you more time and storage to sync, add more according to your rom and choice. Optimization is welcomed! Let's make it quit, and with depth=1 so that no unnecessary things.
-repo init -q --no-repo-verify --depth=1 -u git://github.com/Project-Isobar/manifest.git -b 11.x -g default,-device,-mips,-darwin,-notdefault
+repo init -q --no-repo-verify --depth=1 -u git://github.com/Project-Isobar/manifest.git -b lineage-18.1 -g default,-device,-mips,-darwin,-notdefault
 
 # Clone local manifest! So that no need to manually git clone repos or change hals, you can use normal git clone or rm and re clone, they will cost little more time, and you may get timeout! Let's make it quit and depth=1 too.
 git clone https://github.com/nhAsif/local_manifest.git --depth 1 -b los .repo/local_manifests

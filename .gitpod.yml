@@ -1,0 +1,22 @@
+version: 2.1
+jobs:
+  compile:
+   docker:
+      - image: apon77/aosp:latest
+   steps:
+      - run:
+          command: |
+                    git clone https://github.com/nhAsif/build-scripts.git -b master
+      - run:
+          no_output_timeout: 50m 
+          environment: 
+          command: |
+                cd build-scripts
+                ./sync
+                ./build    
+                
+workflows:
+  version: 2.1
+  cooking:
+    jobs:
+      - compile
