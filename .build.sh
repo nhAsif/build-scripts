@@ -24,7 +24,7 @@ git config --global user.email "najmulhasan3609@gmail.com" &&\
 git config --global user.name "nhAsif" &&\
 
 cd ~/android/lineage &&\
-repo init --depth=1 --no-repo-verify -u https://github.com/ArrowOS/android_manifest.git -b arrow-12.0 &&\
+repo init --depth=1 --no-repo-verify -u git://github.com/ArrowOS/android_manifest.git -b arrow-12.0 -g default,-mips,-darwin,-notdefault &&\
 git clone https://github.com/nhAsif/local_manifest.git --depth 1 -b arrow-12 .repo/local_manifests &&\
 repo sync -j$(nproc --all) -c -j$(nproc --all) --force-sync --no-clone-bundle --no-tags --optimized-fetch --prune &&\
 cd ~/android/lineage &&\
