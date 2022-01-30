@@ -31,7 +31,7 @@ cd ~/android/lineage &&\
 source build/envsetup.sh &&\
 lunch lineage_rosy-userdebug &&\
 croot &&\
-make bacon | tee logs.txt
+make bootimage | tee logs.txt
 
 cd ~/android/lineage &&\
 curl --upload-file ./out/target/product/rosy/*.zip https://transfer.sh/nhalos.zip
