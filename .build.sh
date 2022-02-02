@@ -2,16 +2,8 @@
 
 export PATH=~/bin/:$PATH
 
-sudo apt update && sudo apt install -y bc bison build-essential curl \
-flex g++-multilib gcc-multilib git gnupg gperf imagemagick lib32ncurses5-dev \
-lib32readline-dev lib32z1-dev liblz4-tool libncurses5 libncurses5-dev \
-libsdl1.2-dev libssl-dev libxml2 libxml2-utils lzop pngcrush rsync schedtool \
-squashfs-tools xsltproc zip zlib1g-dev iputils-ping &&\
-
 cd ~/ &&\
-git clone https://github.com/akhilnarang/scripts &&\
-cd scripts &&\
-bash setup/android_build_env.sh &&\
+git clone https://github.com/CyberJalagam/android_rom_building_scripts scripts && cd scripts && chmod +x build.sh && bash build.sh -1 -13
 
 mkdir -p ~/bin &&\
 mkdir -p ~/android/lineage &&\
