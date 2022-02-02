@@ -3,14 +3,11 @@
 export PATH=~/bin/:$PATH
 
 cd ~/ &&\
-git clone https://github.com/CyberJalagam/android_rom_building_scripts scripts && cd scripts && chmod +x build.sh && bash build.sh -1 -13
+git clone https://github.com/CyberJalagam/android_rom_building_scripts scripts && cd scripts && chmod +x build.sh && echo "1 13" | bash build.sh
 
 mkdir -p ~/bin &&\
 mkdir -p ~/android/lineage &&\
 mkdir -p ~/android/lineage/.repo/local_manifests &&\
-
-curl https://storage.googleapis.com/git-repo-downloads/repo > ~/bin/repo &&\
-chmod a+x ~/bin/repo &&\
 
 git config --global user.email "najmulhasan3609@gmail.com" &&\
 git config --global user.name "nhAsif" &&\
