@@ -21,6 +21,3 @@ source build/envsetup.sh &&\
 lunch lineage_rosy-userdebug &&\
 croot &&\
 make sepolicy | tee logs.txt
-
-cd ~/android/lineage &&\
-curl --upload-file ./out/target/product/rosy/*.zip https://transfer.sh/nhalos.zip
