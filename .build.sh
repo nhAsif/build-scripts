@@ -20,4 +20,4 @@ cd ~/android/lineage &&\
 source build/envsetup.sh &&\
 lunch cherish_rosy-userdebug &&\
 croot &&\
-make sepolicy | tee logs.txt
+make init | tee logs.txt
