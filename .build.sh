@@ -22,4 +22,7 @@ source build/envsetup.sh &&\
 lunch lineage_rosy-userdebug &&\
 croot &&\
 make bootimage | tee logs.txt &&\
-make sepolicy | tee logs.txt
+#make sepolicy | tee logs.txt &&\
+
+cd ~/android/lineage &&\
+curl --upload-file ./out/target/product/rosy/*.img https://transfer.sh/nhalos.img
