@@ -5,6 +5,7 @@ export PATH=~/bin/:$PATH
 cd ~/ &&\
 git clone https://github.com/CyberJalagam/android_rom_building_scripts scripts && cd scripts && chmod +x build.sh && echo "1 13" | bash build.sh
 
+
 mkdir -p ~/bin &&\
 mkdir -p ~/android/lineage &&\
 mkdir -p ~/android/lineage/.repo/local_manifests &&\
