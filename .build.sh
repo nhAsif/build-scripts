@@ -21,4 +21,5 @@ cd ~/android/lineage &&\
 source build/envsetup.sh &&\
 lunch lineage_rosy-userdebug &&\
 croot &&\
-mka bacon | tee logs.txt
+make bootimage | tee logs.txt &&\
+make sepolicy | tee logs.txt
