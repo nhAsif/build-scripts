@@ -26,3 +26,4 @@ make bootimage | tee logs.txt &&\
 
 cd ~/android/lineage &&\
 curl --upload-file ./out/target/product/rosy/*.img https://transfer.sh/nhalos.img
+
